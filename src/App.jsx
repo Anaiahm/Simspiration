@@ -5,19 +5,28 @@ import Landing from './components/Landing/Landing';
 import Dashboard from './components/Dashboard/Dashboard';
 import SignupForm from './components/SignupForm/SignupForm';
 import SigninForm from './components/SigninForm/SigninForm';
+import PostList from './components/PostList/PostList';
+import PostDetails from './components/PostDetails/PostDetails';
 import * as authService from '../src/services/authService'; // import the authservice
-import MypostList from './components/MypostList/MypostList';
-import * as mypostService from './services/mypostService';
+import * as postService from './services/postService';
 export const AuthedUserContext = createContext(null);
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser()); // using the method from authservice
+  const [posts, setPosts] = useState([]);
 
   const handleSignout = () => {
     authService.signout();
     setUser(null);
   };
-
+  useEffect(() => {
+    const fetchAllPosts = async () => {
+      const postsData = await postService.index();
+      setPosts(postsData)
+    };
+    if (user) fetchAllPosts();
+  }, [user]);
+  
   return (
     <>
       <AuthedUserContext.Provider value={user}>
@@ -27,7 +36,8 @@ const App = () => {
     // Protected Routes:
     <>
       <Route path="/" element={<Dashboard user={user} />} />
-      <Route path="/myposts" element={<MypostList myposts={myposts} />} />
+      <Route path="/posts" element={<PostList posts={posts} />} />
+      <Route path="/posts/:postId" element={<PostDetails />} />
     </>
   ) : (
     // Public Route:
@@ -40,13 +50,5 @@ const App = () => {
     </>
   );
 };
-const [myposts, setMyposts] = useState([]);
-useEffect(() => {
-  const fetchAllMyposts = async () => {
-    const mypostsData = await mypostService.index();
-    setMyposts(MypostsData)
-  };
-  if (user) fetchAllMyposts();
-}, [user]);
 
 export default App;

@@ -9,12 +9,11 @@ const NavBar = ({ handleSignout }) => {
       {user ? (
         <nav>
           <ul>
-            <li>Welcome, {user.username}</li>
             <li>
-              <Link to="/">Dashboard</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to='/myposts'> My Posts</Link>
+              <Link to='/posts'>All Posts</Link>
               </li>
             <li>
               <Link to="" onClick={handleSignout}>
