@@ -7,7 +7,7 @@
   Insert Screenshots Here!
 
   ## 🚀 Get Started
-  Ready to play? Check out Simstagram now! 🌟💚 <br>
+  Ready to be simspired? Check out Simspiration now! 🌟💚 <br>
   [Simspiration](https://sweat-scribe-3fc4d84a62af.herokuapp.com/) <br>
   
   Or, Peek Behind the Scenes of Our Planning Journey! ✏️📓 <br>
@@ -30,25 +30,9 @@
   ![VSCode](https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio)
 
   ## 🔮 Future Plans
-<!-- - **Track Your Sips**
-  - **Feature**: Allow users to log water intake by specifying the amount consumed (e.g., 250 ml, 500 ml).
-  - **Benefit**: Helps users track hydration more accurately and meet daily water consumption goals.
-
-- **Expanded Exercise Options**
-  - **Feature**: Add a wider range of exercise options to choose from, including:
-    - Cardio: Jump rope, rowing, stair climbing
-    - Strength: Deadlifts, kettlebell swings, tricep dips
-    - Flexibility: Pilates, foam rolling, dynamic stretching
-    - Functional Training: TRX, battle ropes, kettlebell workouts
-  - **Benefit**: Offers users more variety and customization in their workout routines.
-
-- **Nutrition Tracking**
-  - **Feature**: Allow users to log daily meals and snacks, including nutritional information like calories, proteins, and fats.
-  - **Benefit**: Complements workout tracking by giving a holistic view of overall health and fitness.
-
-- **Customizable Workout Goals**
-  - **Feature**: Set and track personalized workout goals (e.g., number of workouts per week, target calories burned).
-  - **Benefit**: Provides tailored fitness objectives to keep users motivated.
+<!-- - **Search Function**
+  - **Feature**: Allow users to search for a specific post.
+  - **Benefit**: Helps users find relevant posts easier.
 
 - **User Feedback and Suggestions**
   - **Feature**: Implement a feedback system for users to suggest new features or improvements.
