@@ -1,6 +1,7 @@
 import { useState, createContext, useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
+import Header from './components/Header/Header';
 import Landing from './components/Landing/Landing';
 import Dashboard from './components/Dashboard/Dashboard';
 import SignupForm from './components/SignupForm/SignupForm';
@@ -51,6 +52,7 @@ const handleUpdatePost = async (postId, postFormData) => {
   return (
     <>
       <AuthedUserContext.Provider value={user}>
+      <Header />
         <NavBar user={user} handleSignout={handleSignout} />
         <Routes>
         {user ? (
