@@ -1,0 +1,41 @@
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    padding: 0 20px;
+    position: relative;
+    flex-wrap: nowrap;
+  }
+  
+  .centered-image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .icon-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .icon-link {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: transparent;
+    color: black;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .icon-link:hover {
+    color: hotpink;
+  }
+  
+  .icon-link svg {
+    font-size: 24px;
+  }
+  
+
+  
