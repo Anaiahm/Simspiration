@@ -9,12 +9,13 @@ import SigninForm from './components/SigninForm/SigninForm';
 import PostList from './components/PostList/PostList';
 import PostDetails from './components/PostDetails/PostDetails';
 import PostForm from './components/PostForm/PostForm';
-import * as authService from '../src/services/authService'; // import the authservice
+import * as authService from '../src/services/authService';
 import * as postService from './services/postService';
+import { Helmet } from 'react-helmet';
 export const AuthedUserContext = createContext(null);
 
 const App = () => {
-  const [user, setUser] = useState(authService.getUser()); // using the method from authservice
+  const [user, setUser] = useState(authService.getUser()); 
   const [posts, setPosts] = useState([]);
   const navigate = useNavigate();
 
@@ -52,7 +53,7 @@ const handleUpdatePost = async (postId, postFormData) => {
   return (
     <>
       <AuthedUserContext.Provider value={user}>
-      <Header />
+      <Header user={user} handleSignout={handleSignout} />
         <NavBar user={user} handleSignout={handleSignout} />
         <Routes>
         {user ? (
@@ -77,3 +78,5 @@ const handleUpdatePost = async (postId, postFormData) => {
 };
 
 export default App;
+
+// TESTING

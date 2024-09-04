@@ -18,16 +18,13 @@ function Header({ handleSignout }) {
           <Link to="/" className="icon-link">
           <FontAwesomeIcon icon={faHome} />
         </Link>
-        <Link to="/dashboard" className="icon-link">
-          <FontAwesomeIcon icon={faUser} />
-        </Link>
           <Link to="/favorites" className="icon-link">
           <FontAwesomeIcon icon={faHeart} />
         </Link>
         <Link to="/nightmode" className="icon-link">
           <FontAwesomeIcon icon={faMoon} />
         </Link>
-        <Link to="/logout" className="icon-link">
+        <Link to="" onClick={handleSignout} className="icon-link">
           <FontAwesomeIcon icon={faSignOutAlt} />
         </Link>
         </div>
@@ -37,12 +34,12 @@ function Header({ handleSignout }) {
         <header>
              <div className="header-content">
              <img src="https://imgur.com/dqOzWaR.png" alt="Centered Image" className="centered-image" />
-            <Link to="/" className="icon-link">
-          <FontAwesomeIcon icon={faHome} />
-        </Link>
-            <Link to="/nightmode" className="icon-link">
-          <FontAwesomeIcon icon={faMoon} />
-        </Link>
+         <li>
+              <Link to="/signin" className='logs'>LOG IN</Link>
+            </li>
+            <li>
+              <Link to="/signup" className='logs'>SIGN UP</Link>
+            </li>
         </div>
         </header>
      )}
@@ -52,6 +49,12 @@ function Header({ handleSignout }) {
 
 export default Header;
 
+{/* <Link to="/" className="icon-link">
+    <FontAwesomeIcon icon={faHome} />
+    </Link>
+    <Link to="/nightmode" className="icon-link">
+    <FontAwesomeIcon icon={faMoon} />
+    </Link> */}
 {/* <button>
     <FontAwesomeIcon icon={faHome} />
     </button>
@@ -67,3 +70,6 @@ export default Header;
     <button>
     <FontAwesomeIcon icon={faSignOutAlt} />
     </button> */}
+    // <Link to="/dashboard" className="icon-link">
+    //   <FontAwesomeIcon icon={faUser} />
+    // </Link>

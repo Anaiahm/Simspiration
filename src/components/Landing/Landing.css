@@ -1,0 +1,13 @@
+.sulsul {
+    width: calc(100% - 220px); /* Adjust the width to leave space on the sides */
+    display: block; /* Ensures it behaves like a block element */
+    margin: 0 auto; /* Centers the image horizontally */
+    height: auto; /* Maintains aspect ratio */
+    padding: 0; /* No internal padding */
+}
+h3 {
+    width: calc(100% - 220px);
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+}

@@ -5,37 +5,51 @@
     padding: 0 20px;
     position: relative;
     flex-wrap: nowrap;
-  }
-  
-  .centered-image {
+    
+}
+
+.header-content ul, .header-content ol {
+    list-style-type: none;
+}
+.centered-image {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-  }
+}
 
-  .icon-container {
+.icon-container {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     gap: 10px;
-  }
-  
-  .icon-link {
+}
+
+.icon-link {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     padding: 5px;
     background-color: transparent;
     color: black;
     border: none;
     cursor: pointer;
-  }
-  
-  .icon-link:hover {
-    color: hotpink;
-  }
-  
-  .icon-link svg {
-    font-size: 24px;
-  }
-  
+}
 
-  
+.icon-link:hover {
+    color: hotpink;
+}
+
+.icon-link svg {
+    font-size: 24px;
+}
+
+
+
+.logs:hover {
+    color: hotpink;
+}
+.logs a {
+    color: inherit; /* Inherits color from parent .logs */
+    text-decoration: none; /* Ensures no underline */
+    display: block; /* Ensures full clickable area */
+}
+
+
