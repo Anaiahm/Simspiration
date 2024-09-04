@@ -28,9 +28,11 @@ const PostDetails = (props) => {
       if (!post) return <Loading />;
     return (
     <main className={styles.container}>
+        <section>
         <header>
-    <p>{post.category.toUpperCase()}</p>
+    <p><Icon category={post.category}/>{post.category.toUpperCase()}<Icon category={post.category}/></p>
     <h1>{post.title}</h1>
+    <div>
     <AuthorInfo content={post} />
     <div>
     {post.author._id === user._id && (
@@ -40,9 +42,10 @@ const PostDetails = (props) => {
     </>
   )}
   </div>
+  </div>
   </header>
   <p>{post.text}</p>
-  <section>
+  </section>
     <h2>Comments</h2>
     <CommentForm handleAddComment={handleAddComment} />
 
@@ -66,7 +69,6 @@ const PostDetails = (props) => {
       <p>{comment.text}</p>
     </article>
   ))}
-  </section>
   </main>
     );
   };
