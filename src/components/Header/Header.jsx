@@ -12,19 +12,19 @@ function Header({ handleSignout }) {
     <>
       {user ? (
     <header className={styles.container}>
-      <div className="header-content">
+      <div className={styles['header-content']}>
         <img src="https://imgur.com/dqOzWaR.png" alt="Centered Image" className="centered-image" />
-        <div className="right-buttons">
-          <Link to="/" className="icon-link">
+        <div className={styles['right-buttons']}>
+          <Link to="/" className={styles['icon-link']}>
           <FontAwesomeIcon icon={faHome} />
         </Link>
-          <Link to="/favorites" className="icon-link">
+          <Link to="/favorites" className={styles['icon-link']}>
           <FontAwesomeIcon icon={faHeart} />
         </Link>
-        <Link to="/nightmode" className="icon-link">
+        <Link to="/nightmode" className={styles['icon-link']}>
           <FontAwesomeIcon icon={faMoon} />
         </Link>
-        <Link to="" onClick={handleSignout} className="icon-link">
+        <Link to="" onClick={handleSignout} className={styles['icon-link']}>
           <FontAwesomeIcon icon={faSignOutAlt} />
         </Link>
         </div>
@@ -32,14 +32,16 @@ function Header({ handleSignout }) {
     </header>
     ) : (
         <header className={styles.container}>
-             <div className="header-content">
-             <img src="https://imgur.com/dqOzWaR.png" alt="Centered Image" className="centered-image" />
+             <div className={styles['header-content']}>
+             <img src="https://imgur.com/dqOzWaR.png" alt="Centered Image" className={styles['centered-image']} />
+             <ul className={styles.logs}>
          <li>
-              <Link to="/signin" className='logs'>LOG IN</Link>
+              <Link to="/signin" className={styles.logs}>LOG IN</Link>
             </li>
             <li>
-              <Link to="/signup" className='logs'>SIGN UP</Link>
+              <Link to="/signup" className={styles.logs}>SIGN UP</Link>
             </li>
+            </ul>
         </div>
         </header>
      )}
