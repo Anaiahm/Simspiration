@@ -80,3 +80,8 @@ const handleUpdatePost = async (postId, postFormData) => {
 export default App;
 
 // TESTING
+
+{/* <Route path="/posts/cheats" element={<CheatList posts={posts}/>} />
+<Route path="/posts/tips" element={<TipsList posts={posts}/>} />
+<Route path="/posts/build" element={<BuildList posts={posts}/>} />
+<Route path="/posts/game" element={<GameList posts={posts}/>} /> */}

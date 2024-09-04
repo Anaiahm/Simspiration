@@ -14,16 +14,16 @@ const NavBar = ({ handleSignout }) => {
               <Link to='/posts'>All Posts</Link>
             </li>
             <li>
-              <Link to="/cheats">Cheats</Link>
+              <Link to="/posts/cheats">Cheats</Link>
             </li>
             <li> 
-              <Link to="/tips">Tips</Link>
+              <Link to="/posts/tips">Tips</Link>
             </li>
             <li> 
-              <Link to="/buildchallenges">Build Challenges</Link>
+              <Link to="/posts/build">Build Challenges</Link>
             </li>
             <li> 
-              <Link to="/gameplaychallenges">GamePlay Challenges</Link>
+              <Link to="/posts/game">GamePlay Challenges</Link>
             </li>
             <li>
               <Link to="/posts/new">New Post</Link>
@@ -34,19 +34,19 @@ const NavBar = ({ handleSignout }) => {
         <nav>
           <ul>
             <li>
-              <Link to='/posts'>All Posts</Link>
+              <Link to='/signin'>All Posts</Link>
             </li>
             <li>
-              <Link to="/cheats">Cheats</Link>
+              <Link to="/signin">Cheats</Link>
             </li>
             <li> 
-              <Link to="/tips">Tips</Link>
+              <Link to="/signin">Tips</Link>
             </li>
             <li> 
-              <Link to="/buildchallenges">Build Challenges</Link>
+              <Link to="/signin">Build Challenges</Link>
             </li>
             <li> 
-              <Link to="/gameplaychallenges">GamePlay Challenges</Link>
+              <Link to="/signin">GamePlay Challenges</Link>
             </li>
           </ul>
         </nav>
