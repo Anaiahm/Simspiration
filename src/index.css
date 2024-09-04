@@ -151,3 +151,12 @@ header {
   display: flex;
   justify-content: center;
 }
+
+.nightMode {
+  background-color: #333;
+  color: #fff;
+}
+
+.nightMode .icon-link {
+  color: #fff;
+}

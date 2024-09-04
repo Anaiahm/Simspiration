@@ -76,7 +76,7 @@
 
 .right-buttons, .logs {
     display: flex;
-    gap: 0px; 
+    gap: 10px; 
     position:absolute;
     right: 20px;
 }
@@ -95,6 +95,8 @@
 
 .logs {
     list-style: none;
-    display: flex;
+    display: inline-block;
+    margin: 0 15px;
     gap: 15px;
+    font-size: 16px;
 }

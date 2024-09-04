@@ -13,17 +13,22 @@ import * as authService from '../src/services/authService';
 import * as postService from './services/postService';
 import { Helmet } from 'react-helmet';
 export const AuthedUserContext = createContext(null);
-
+export const NightModeContext = createContext();
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser()); 
   const [posts, setPosts] = useState([]);
+  const [isNightMode, setIsNightMode] = useState(false);
   const navigate = useNavigate();
 
   const handleSignout = () => {
     authService.signout();
     setUser(null);
   };
+  const toggleNightMode = () => {
+    setIsNightMode(prevMode => !prevMode);
+  };
+
   useEffect(() => {
     const fetchAllPosts = async () => {
       const postsData = await postService.index();
@@ -52,8 +57,9 @@ const handleUpdatePost = async (postId, postFormData) => {
 };
 
   return (
-    <>
+      <NightModeContext.Provider value={{ isNightMode, toggleNightMode }}>
       <AuthedUserContext.Provider value={user}>
+      <div className={isNightMode ? 'nightMode' : ''}>
       <Header user={user} handleSignout={handleSignout} />
         <NavBar user={user} handleSignout={handleSignout} />
         <Routes>
@@ -73,8 +79,9 @@ const handleUpdatePost = async (postId, postFormData) => {
   <Route path="/signup" element={<SignupForm setUser={setUser} />} />
   <Route path="/signin" element={<SigninForm setUser={setUser} />} />
         </Routes>
+        </div>
       </AuthedUserContext.Provider>
-    </>
+    </NightModeContext.Provider>
   );
 };
 

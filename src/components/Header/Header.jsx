@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { AuthedUserContext } from '../../App';
+import { AuthedUserContext, NightModeContext } from '../../App';
 import { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faCog, faMoon, faHeart, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
@@ -8,6 +8,8 @@ import styles from './Header.module.css';
 
 function Header({ handleSignout }) {
     const user = useContext(AuthedUserContext);
+    const { isNightMode, toggleNightMode } = useContext(NightModeContext);
+    
   return (
     <>
       {user ? (
