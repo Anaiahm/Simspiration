@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Icon from "../Icon/Icon"
+import styles from './CommentForm.module.css';
 
 import * as postService from '../../services/postService';
 
@@ -15,6 +16,8 @@ const CommentForm = (props) => {
     props.handleAddComment(formData);
     setFormData({ text: '' });
   };
+
+
 
   return (
     <form onSubmit={handleSubmit}>

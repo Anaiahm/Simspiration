@@ -68,14 +68,11 @@
     margin: 0 0 0 7px;
   }
   
-  /* Button icon styling */
-  /* This styling will be used when we add in our reusable icon component */
-  
   .container header button img,
   .container header a img {
     width: 24px;
     height: 24px;
-    opacity: 0.25;
+    opacity: 1;
   }
   
   .container header button:hover,
@@ -93,7 +90,7 @@
     background-color: rgb(190, 190, 190);
   }
   
-  /* Comment form styling */
+ 
   
   .container form {
     padding: 0;

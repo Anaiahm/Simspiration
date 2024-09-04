@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import * as postService from '../../services/postService';
 import { useParams } from 'react-router-dom';
 import Icon from "../Icon/Icon";
+import styles from './PostForm.module.css'
+
 
 const PostForm = (props) => {
   const [formData, setFormData] = useState({
@@ -34,7 +36,7 @@ const PostForm = (props) => {
 
 
   return (
-    <main>
+    <main className={styles.container}>
       <form onSubmit={handleSubmit}>
         <h1>{postId ? 'Edit Post' : 'New Post'}</h1>
         <label htmlFor="title-input">Title</label>
