@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import * as postService from '../../services/postService';
 import { useParams } from 'react-router-dom';
+import Icon from "../Icon/Icon";
 
 const PostForm = (props) => {
   const [formData, setFormData] = useState({
@@ -67,7 +68,7 @@ const PostForm = (props) => {
           <option value="Build Challenges">Build Challenges</option>
           <option value="GamePlay Challenges">GamePlay Challenges</option>
         </select>
-        <button type="submit">SUBMIT</button>
+        <button type="submit"><Icon category="Create" /></button>
       </form>
     </main>
   );

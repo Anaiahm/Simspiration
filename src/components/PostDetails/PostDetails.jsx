@@ -5,6 +5,9 @@ import CommentForm from '../CommentForm/CommentForm';
 import { AuthedUserContext } from '../../App';
 import { Link } from 'react-router-dom';
 import styles from './PostDetails.module.css';
+import Loading from '../Loading/Loading';
+import Icon from '../Icon/Icon';
+import AuthorInfo from '../../components/AuthorInfo/AuthorInfo.jsx';
 
 const PostDetails = (props) => {
     const { postId } = useParams();
@@ -22,26 +25,23 @@ const PostDetails = (props) => {
         const newComment = await postService.createComment(postId, commentFormData);
         setPost({ ...post, comments: [...post.comments, newComment] });
       };
-      if (!post) return <main>Loading...</main>;
+      if (!post) return <Loading />;
     return (
     <main className={styles.container}>
         <header>
     <p>{post.category.toUpperCase()}</p>
     <h1>{post.title}</h1>
+    <AuthorInfo content={post} />
     <div>
     {post.author._id === user._id && (
     <>
-      <Link to={`/posts/${postId}/edit`}>Edit</Link>
-      <button onClick={() => props.handleDeletePost(postId)}>Delete</button>
+      <Link to={`/posts/${postId}/edit`}><Icon category="Edit" /> </Link>
+      <button onClick={() => props.handleDeletePost(postId)}><Icon category="Trash" /> </button>
     </>
   )}
   </div>
   </header>
   <p>{post.text}</p>
-    <p>
-      {post.author.username} posted on
-      {new Date(post.createdAt).toLocaleDateString()}
-    </p>
   <section>
     <h2>Comments</h2>
     <CommentForm handleAddComment={handleAddComment} />
@@ -52,15 +52,12 @@ const PostDetails = (props) => {
     <article key={comment._id}>
       <header>
         <div>
-        <p>
-          {comment.author.username} posted on
-          {new Date(comment.createdAt).toLocaleDateString()}
-        </p>
+        <AuthorInfo content={comment} />
         {comment.author._id === user._id && (
             <>
-             <Link to={`/posts/${postId}/comments/${comment._id}/edit`}>Edit</Link>
+             <Link to={`/posts/${postId}/comments/${comment._id}/edit`}><Icon category="Edit" /></Link>
           <button onClick={() => handleDeleteComment(comment._id)}>
-            Delete
+          <Icon category="Trash" />
           </button>
             </>
         )}

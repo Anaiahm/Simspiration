@@ -1,29 +1,30 @@
 import { Link } from 'react-router-dom';
 import { AuthedUserContext } from '../../App';
 import { useContext } from 'react';
-import './NavBar.css'; 
+import styles from './NavBar.module.css'; 
+import Icon from "../Icon/Icon";
 
 const NavBar = ({ handleSignout }) => {
   const user = useContext(AuthedUserContext);
   return (
     <>
       {user ? (
-        <nav>
+        <nav className={styles.container}>
           <ul>
             <li>
               <Link to='/posts'>All Posts</Link>
             </li>
             <li>
-              <Link to="/posts/cheats">Cheats</Link>
+              <Link to="/posts/cheats">Cheats <Icon category="Cheats" /> </Link>
             </li>
             <li> 
-              <Link to="/posts/tips">Tips</Link>
+              <Link to="/posts/tips">Tips <Icon category="Tips" /></Link>
             </li>
             <li> 
-              <Link to="/posts/build">Build Challenges</Link>
+              <Link to="/posts/build">Build Challenges <Icon category="Build Challenges" /></Link>
             </li>
             <li> 
-              <Link to="/posts/game">GamePlay Challenges</Link>
+              <Link to="/posts/game">GamePlay Challenges <Icon category="GamePlay Challenges" /></Link>
             </li>
             <li>
               <Link to="/posts/new">New Post</Link>
@@ -31,22 +32,22 @@ const NavBar = ({ handleSignout }) => {
           </ul>
         </nav>
       ) : (
-        <nav>
+        <nav className={styles.container}>
           <ul>
             <li>
               <Link to='/signin'>All Posts</Link>
             </li>
             <li>
-              <Link to="/signin">Cheats</Link>
+              <Link to="/signin">Cheats <Icon category="Cheats"/> </Link>
             </li>
             <li> 
-              <Link to="/signin">Tips</Link>
+              <Link to="/signin">Tips <Icon category="Tips" /> </Link>
             </li>
             <li> 
-              <Link to="/signin">Build Challenges</Link>
+              <Link to="/signin">Build Challenges <Icon category="Build Challenges" /></Link>
             </li>
             <li> 
-              <Link to="/signin">GamePlay Challenges</Link>
+              <Link to="/signin">GamePlay Challenges <Icon category="GamePlay Challenges" /></Link>
             </li>
           </ul>
         </nav>

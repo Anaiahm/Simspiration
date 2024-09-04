@@ -4,14 +4,14 @@ import { AuthedUserContext } from '../../App';
 import { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faCog, faMoon, faHeart, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
-import './Header.css'; 
+import styles from './Header.module.css'; 
 
 function Header({ handleSignout }) {
     const user = useContext(AuthedUserContext);
   return (
     <>
       {user ? (
-    <header>
+    <header className={styles.container}>
       <div className="header-content">
         <img src="https://imgur.com/dqOzWaR.png" alt="Centered Image" className="centered-image" />
         <div className="right-buttons">
@@ -31,7 +31,7 @@ function Header({ handleSignout }) {
             </div>
     </header>
     ) : (
-        <header>
+        <header className={styles.container}>
              <div className="header-content">
              <img src="https://imgur.com/dqOzWaR.png" alt="Centered Image" className="centered-image" />
          <li>

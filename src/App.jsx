@@ -14,6 +14,7 @@ import * as postService from './services/postService';
 import { Helmet } from 'react-helmet';
 export const AuthedUserContext = createContext(null);
 
+
 const App = () => {
   const [user, setUser] = useState(authService.getUser()); 
   const [posts, setPosts] = useState([]);

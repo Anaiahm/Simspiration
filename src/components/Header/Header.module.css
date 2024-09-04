@@ -9,23 +9,17 @@
 }
 
 .header-content ul, .header-content ol {
+    
     list-style-type: none;
-}
-.centered-image {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .icon-container {
     display: flex;
-    /* align-items: center; */
     gap: 10px;
 }
 
 .icon-link {
     display: flex;
-    /* align-items: center; */
     padding: 5px;
     background-color: transparent;
     color: black;
@@ -47,9 +41,14 @@
     color: hotpink;
 }
 .logs a {
-    color: inherit; /* Inherits color from parent .logs */
-    text-decoration: none; /* Ensures no underline */
-    display: block; /* Ensures full clickable area */
+    color: inherit; 
+    text-decoration: none;
+    display: block; 
 }
 
 
+.centered-image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}

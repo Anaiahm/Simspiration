@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
 import styles from './PostList.module.css';
+import Icon from '../Icon/Icon.jsx';
+import AuthorInfo from '../../components/AuthorInfo/AuthorInfo.jsx';
 
 const PostList = (props) => {
     return (
-    <main >
+      <main >
 <div>
 <img className="postpic" src="https://imgur.com/WXWcfEx.png" />
 </div>
@@ -12,13 +14,12 @@ const PostList = (props) => {
       <Link key={post._id} to={`/posts/${post._id}`}>
         <article>
           <header>
+            <div>
             <h2>{post.title}</h2>
+            <Icon category={post.category}/>
+            </div>
           </header>
-            <p>
-              {post.author.username} posted on 
-              {new Date(post.createdAt).toLocaleDateString()}
-            </p>
-          {/* <p>{post.text}</p> */}
+          <AuthorInfo content={post} />
         </article>
       </Link>
     ))}

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Icon from "../Icon/Icon"
 
 import * as postService from '../../services/postService';
 
@@ -26,7 +27,7 @@ const CommentForm = (props) => {
         value={formData.text}
         onChange={handleChange}
       />
-      <button type="submit">SUBMIT COMMENT</button>
+      <button type="submit"><Icon category="Create" /></button>
     </form>
   );
 };
