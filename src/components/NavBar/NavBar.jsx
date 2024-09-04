@@ -15,16 +15,16 @@ const NavBar = ({ handleSignout }) => {
               <Link to='/posts'>All Posts</Link>
             </li>
             <li>
-              <Link to="/posts/cheats">Cheats <Icon category="Cheats" /> </Link>
+              <Link to="/posts/cheats"><Icon category="Cheats" /> Cheats <Icon category="Cheats" /> </Link>
             </li>
             <li> 
-              <Link to="/posts/tips">Tips <Icon category="Tips" /></Link>
+              <Link to="/posts/tips"><Icon category="Tips" /> Tips <Icon category="Tips" /></Link>
             </li>
             <li> 
-              <Link to="/posts/build">Build Challenges <Icon category="Build Challenges" /></Link>
+              <Link to="/posts/build"><Icon category="Build Challenges" /> Build Challenges <Icon category="Build Challenges" /></Link>
             </li>
             <li> 
-              <Link to="/posts/game">GamePlay Challenges <Icon category="GamePlay Challenges" /></Link>
+              <Link to="/posts/game"><Icon category="GamePlay Challenges" /> GamePlay Challenges <Icon category="GamePlay Challenges" /></Link>
             </li>
             <li>
               <Link to="/posts/new">New Post</Link>
@@ -57,17 +57,3 @@ const NavBar = ({ handleSignout }) => {
 };
 export default NavBar;
 
-// <li>
-//   <Link to="" onClick={handleSignout}>
-//     Sign Out
-//   </Link>
-// </li>
-// <li>
-//   <Link to="/">Home</Link>
-// </li>
-{/* <li>
-  <Link to="/signin">Sign In</Link>
-</li>
-<li>
-  <Link to="/signup">Sign Up</Link>
-</li> */}

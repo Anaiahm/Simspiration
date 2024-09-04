@@ -48,28 +48,3 @@ function Header({ handleSignout }) {
 }
 
 export default Header;
-
-{/* <Link to="/" className="icon-link">
-    <FontAwesomeIcon icon={faHome} />
-    </Link>
-    <Link to="/nightmode" className="icon-link">
-    <FontAwesomeIcon icon={faMoon} />
-    </Link> */}
-{/* <button>
-    <FontAwesomeIcon icon={faHome} />
-    </button>
-    <button>
-    <FontAwesomeIcon icon={faUser} />
-    </button>
-    <button>
-    <FontAwesomeIcon icon={faHeart} />
-    </button>
-    <button>
-    <FontAwesomeIcon icon={faMoon} />
-    </button>
-    <button>
-    <FontAwesomeIcon icon={faSignOutAlt} />
-    </button> */}
-    // <Link to="/dashboard" className="icon-link">
-    //   <FontAwesomeIcon icon={faUser} />
-    // </Link>

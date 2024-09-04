@@ -8,7 +8,7 @@
 
   ## 🚀 Get Started
   Ready to be simspired? Check out Simspiration now! 🌟💚 <br>
-  [Simspiration](https://sweat-scribe-3fc4d84a62af.herokuapp.com/) <br>
+  [Simspiration](https://simspiration.netlify.app/) <br>
   
   Or, Peek Behind the Scenes of Our Planning Journey! ✏️📓 <br>
   [Simspiration Trello board](https://trello.com/invite/b/66c668e356fd96123090a884/ATTI6aff8bec14e4a896e95b64b460e37a5f9A5B0888/simsational)
@@ -30,10 +30,23 @@
   ![VSCode](https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio)
 
   ## 🔮 Future Plans
-<!-- - **Search Function**
-  - **Feature**: Allow users to search for a specific post.
-  - **Benefit**: Helps users find relevant posts easier.
 
-- **User Feedback and Suggestions**
-  - **Feature**: Implement a feedback system for users to suggest new features or improvements.
-  - **Benefit**: Ensures the app evolves according to user needs and preferences. -->
+- **Post Images**
+  - **Feature**: Allow users to add images to their posts.
+  - **Benefit**: Adds more customization to posts.
+
+- **Favorites**
+  - **Feature**: Allow users to save their favorite posts.
+  - **Benefit**: Helps users find favorite posts easier.
+
+- **Category Pages**
+  - **Feature**: Allow Users to easily filter between the type of posts.
+  - **Benefit**: Make it easier/quicker to find relevant posts.
+
+- **User Dashboard**
+  - **Feature**: Allow Users to see only their posts on their Dashboard.
+  - **Benefit**: Make it easier/quicker to find/update/delete their posts.
+
+- **Night Mode**
+  - **Feature**: Allow Users adjust color schemes.
+  - **Benefit**: Allow another option for colors.

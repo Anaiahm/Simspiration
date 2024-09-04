@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Icon from "../Icon/Icon"
 import styles from './CommentForm.module.css';
 
-import * as postService from '../../services/postService';
+
 
 const CommentForm = (props) => {
   const [formData, setFormData] = useState({ text: '' });
@@ -20,6 +20,7 @@ const CommentForm = (props) => {
 
 
   return (
+    <main className={styles.container}>
     <form onSubmit={handleSubmit}>
       <label htmlFor="text-input">Your comment:</label>
       <textarea
@@ -32,6 +33,7 @@ const CommentForm = (props) => {
       />
       <button type="submit"><Icon category="Create" /></button>
     </form>
+    </main>
   );
 };
 
